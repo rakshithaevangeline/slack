@@ -8,6 +8,10 @@ body {
 }
 
 /* HEADER STYLES */
+.header-position {
+  position: fixed;
+  width: 100vw;
+}
 .header {
   background-color:#f8f8fa;
   display: flex;
