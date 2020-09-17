@@ -1,0 +1,74 @@
+/* GLOBAL STYLES */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+}
+.icon {
+  color: #686f74;
+}
+
+/* HEADER STYLES */
+.header {
+  background-color:#f8f8fa;
+  display: flex;
+  padding: 0.5em;
+}
+.header-icon {
+  font-size: 1.2em;
+}
+.header-col-left {
+  flex: 1 1 auto;
+}
+.header-col-middle {
+  display: flex;
+  flex: 1 1 auto;
+}
+  .header-icon-clock {
+    flex: 1 1 auto;
+    position: relative;
+    top: 0.2em;
+    left: 3.5em;
+  }
+  .fa-clock {
+    font-size: 1.3em;
+  }
+  .header-search {
+    background-color: #ebebed;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    flex: 1 1 auto;
+    padding-top: 0.6em;
+    position: relative;
+    text-align: center;
+    width: 400px;
+
+  }
+    .header-icon-search {
+      flex: 1 1 auto;
+      position: absolute;
+      left: 177px;
+    }
+    .header-search-text {
+      flex: 1 1 auto;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  .header-icon-question {
+    flex: 1 1 auto;
+    position: relative;
+    top: 0.2em;
+    right: -1.5em;
+  }
+  .fa-question-circle {
+    font-size: 1.3em;
+  }
+.header-col-right {
+  flex: 1 1 auto;
+  text-align: right;
+}
+  .header-gravatar {
+    box-sizing: border-box;
+    border-radius: 0.3em;
+    height: 20px;
+}
