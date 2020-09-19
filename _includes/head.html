@@ -2,8 +2,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Slack-Copy</title>
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/main.css">
+  
+  {% if jekyll.environment == "production" %}
+    <link rel="stylesheet" href="/slack/css/reset.css">
+    <link rel="stylesheet" href="/slack/css/main.css">
+  {% else %}
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+  {% endif %}
+
   <link rel="stylesheet" href="../fonts/fontawesome-free-5.14.0-web/css/all.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
