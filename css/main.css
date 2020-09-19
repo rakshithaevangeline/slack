@@ -17,7 +17,7 @@ body {
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   flex: 0.1 1 auto;
-  height: 100vw;
+  height: 100vh;
   /* padding: 0 1em; */
 }
 .col-content {
@@ -48,45 +48,51 @@ body {
   flex: 1 1 auto;
 }
 .header-col-middle {
+  align-items: center;
   display: flex;
   flex: 1 1 auto;
 }
   .header-icon-clock {
     flex: 1 1 auto;
-    position: relative;
+    text-align: right;
+    padding-right: 1em;
+    /* position: relative;
     top: 0.2em;
-    left: 3.5em;
+    left: 3.5em; */
   }
   .fa-clock {
     font-size: 1.3em;
   }
   .header-search {
+    align-items: center;
     background-color: #ebebed;
-    box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
     display: flex;
     flex: 1 1 auto;
-    padding-top: 0.6em;
-    position: relative;
+    padding: 0.3em;
     text-align: center;
     width: 400px;
 
   }
     .header-icon-search {
-      flex: 1 1 auto;
-      position: absolute;
-      left: 177px;
+      flex: 1 0 0;
+      text-align: right;
+      padding-right: 0.5em;
     }
     .header-search-text {
       flex: 1 1 auto;
+      font-size: 0.9em;
       color: rgba(0, 0, 0, 0.4);
+      text-align: left;
     }
   .header-icon-question {
     flex: 1 1 auto;
-    position: relative;
+    padding-left: 1em;
+    /* position: relative;
     top: 0.2em;
-    right: -1.5em;
+    right: -1.5em; */
   }
   .fa-question-circle {
     font-size: 1.3em;
