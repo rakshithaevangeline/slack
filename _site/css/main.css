@@ -1,7 +1,11 @@
 /* GLOBAL STYLES */
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  
+}
+.page {
+  position: relative;
 }
 .icon {
   color: #686f74;
@@ -16,17 +20,50 @@ body {
   background-color:#f8f8fa;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  flex: 0.1 1 auto;
+  flex: 1 1 auto;
   height: 100vh;
-  /* padding: 0 1em; */
+  position: fixed;
+  z-index: 99;
 }
 .col-content {
-  flex: 2 1 auto;
+  flex: 1 1 auto;
 }
 .col-aside {
   flex: 1.5 1 auto;
 }
 
+/* TEXTAREA STYLES */
+.type-text {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 1em 0;
+  /* width: 100vw; */
+}
+.textarea {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em;
+}
+.textarea-icons {
+  align-items: center;
+  background-color: #f8f8fa;
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding: 0.5em;
+}
+.textarea-icons i {
+  font-size: 0.9em;
+  padding: 0.5em;
+}
+.textarea-icons-left {
+  flex: auto;
+}
+.textarea-icons-right {
+  flex: auto;
+  text-align: right;
+}
 
 /* HEADER STYLES */
 .header-position {
@@ -74,7 +111,6 @@ body {
     padding: 0.3em;
     text-align: center;
     width: 40vw;
-
   }
     .header-icon-search {
       flex: 1 0 0;
@@ -104,8 +140,8 @@ body {
     height: 20px;
 }
 
-/* HOME PAGE STYLES */
-/* HOME NAV STYLES */
+
+/* SIDEBAR NAV STYLES */
 .account-nav {
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -185,21 +221,36 @@ body {
     right: 2em;
   }
 
-/* HOME CONTENT STYLES */
+/* CHANNEL CONTENT STYLES */
+/* CHANNEL INFO HEADER STYLES */
+
 .gravatar {
   box-sizing: border-box;
   border-radius: 0.3em;
   height: 25px;
   width: 25px;
+  margin: 0.1em;
+}
+.highlighted-text {
+  font-weight: bold;
+}
+.channel-content {
+  position: relative;
+  left: 13.1em;
 }
 .channel-info {
+  align-items: center;
+  background-color: #fff;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   display: flex;
   padding: 1.5em;
+  position: fixed;
+  width:  87vw;
+  z-index: 200;
 }
   .channel-info-left {
-    flex: 3 1 auto;
+    flex: 1 1 auto;
   }
   .channel-info-left p {
     display: inline-block;
@@ -207,14 +258,103 @@ body {
     .channel-title {
       font-weight: bold;
     }
+    .channel-title .fa-star {
+      color: #1465a3;
+      padding-left: 0.2em;
+    }
     .channel-byline {
       color: rgba(0, 0, 0, 0.5);
       padding: 0.5em 0.5em 0 0;
+    }
+    .channel-byline p{
+      padding-left: 0.2em;
     }
     .channel-byline a {
       text-decoration: none;
       color: #5191bd;
     }
+      .fa-thumbtack {
+        padding-right: 0.2em;
+      }
   .channel-info-right {
-    flex: auto;
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    /* flex-wrap: wrap; */
+    justify-content: right;
   }
+  .channel-info-icon {
+    font-size: 18px;
+    padding: 0.2em 0.6em;
+  }
+
+/* POST INDEX PAGE STYLES */
+.channel-posts-index {
+  position: absolute;
+  top: 5.5em;
+}
+.channel-thread {
+  align-items: flex-start;
+  /* color: rgba( 0, 0, 0, 0.8); */
+  display: flex;
+  padding: 0.5em 1.5em;
+  line-height: 1.5;
+}
+.channel-thread p {
+  font-weight: 300;
+  padding: 0.3em 0 ;
+}
+p.highlighted-text {
+  font-weight: bold;
+}
+.post-gravatar {
+  height: 33px;
+  padding-top: 0.3em;
+  width: 33px;
+}
+.post-container {
+  padding-left: 0.5em;
+  max-width: 80vw;
+}
+.post-container > p:first-child {
+  padding-top: 0;
+}
+.post-author span {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.8em;
+  font-weight: normal;
+  padding-left: 0.3em;
+}
+.post-text > p:first-child {
+  padding-top: 0em;
+  margin-top: -0.3em;
+}
+.post-image {
+  border: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 0;
+}
+.reaction-icon {
+  background-color: #f8f8fa;
+  border-radius: 15px;
+  font-size: 1.2em;
+  padding: 0.5em;
+  height: 15px;
+}
+.post-reply {
+  align-items: center;
+  display: flex;
+  padding: 0.3em;
+}
+.reply-counter {
+  font-size: 0.8em;
+  color: #1465a3;
+}
+p.reply-counter {
+  padding: 0.5em;
+}
+.post-reply span {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.8em;
+  font-weight: normal;
+  padding-left: 0.3em;
+}
